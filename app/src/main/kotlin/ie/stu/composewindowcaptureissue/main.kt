@@ -20,7 +20,12 @@ import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
 
-fun main() = application {
+fun main() {
+    System.setProperty("skiko.renderApi", "OPENGL")
+    postMain()
+}
+
+fun postMain() = application {
     val windowState = rememberWindowState(
         width = 800.dp,
         height = 600.dp,
